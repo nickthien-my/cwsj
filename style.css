@@ -54,6 +54,9 @@ svg:hover {
   font-family: Montserrat;
 }
 
+.showAtDate {
+  display: none;
+}
 
 
 /* RESPONSIVE CSS
