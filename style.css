@@ -1,8 +1,12 @@
 body {
 }
 
-h1 h2 h3 {
+h1 {
   font-family: Merriweather;
+}
+
+h2, h3 {
+  font-size: Montserrat;
 }
 
 p {
@@ -47,7 +51,7 @@ svg:hover {
   line-height: 1;
   /* rtl:remove */
   letter-spacing: -.05rem;
-  font-family: Merriweather;
+  font-family: Montserrat;
 }
 
 
