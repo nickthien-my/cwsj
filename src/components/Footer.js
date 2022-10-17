@@ -7,7 +7,7 @@ export default function Footer() {
         <>
             <Container className="p-5 border-top">
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} className="pb-4">
                         <Row xs="auto" className="pb-3">
                             <Col>
                                 <a href="https://www.facebook.com/CareWarriorsAssociation">
@@ -31,7 +31,7 @@ export default function Footer() {
                             <small className="col-lg-4 justify-content-evenly">Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
                         </Row>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} className="pb-4">
                         <h5>Events</h5>
                         <ul className="list-unstyled text-small">
                             <li className="mb-1">
@@ -68,7 +68,8 @@ export default function Footer() {
                             </li>
                         </ul>
                     </Col>
-                    <Col lg={4}>                                    <h5>Resources</h5>
+                    <Col lg={4} className="pb-4">
+                        <h5>Resources</h5>
                         <ul className="list-unstyled text-small">
                             <li className="mb-1">
                                 <NavLink
