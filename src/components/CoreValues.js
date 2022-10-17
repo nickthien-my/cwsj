@@ -9,7 +9,7 @@ import resilienceicon from "./resilience.svg";
 export default function CoreValues() {
     return (
         <>
-            <Container className="px-5 mb-5">
+            <Container className="px-2 mb-5">
                 <h1 className="border-bottom pb-2 fw-bold">Core Values</h1>
                 <Row className="align-items-center justify-content-evenly">
                     <Col lg={4} className="py-3">

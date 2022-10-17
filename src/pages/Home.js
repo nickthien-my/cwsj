@@ -11,7 +11,7 @@ import TeamMembers from "../components/TeamMembers";
 const Home = () => {
     return (
         <>
-            <Container className="d-flex px-5 pb-5">
+            <Container className="d-flex px-2 pb-5">
                 <Row className="d-flex flex-column-reverse flex-lg-row align-items-center">
                     <Col lg={6}>
                         <h1 class="display-5 fw-bold lh-1 mb-3">Building a Culture of Mental Health, One Community at a Time!</h1>
@@ -26,8 +26,7 @@ const Home = () => {
                         <img
                             alt=""
                             src={logo}
-                            style={{ borderRadius: "300px" }}
-                            className="w-100 d-inline-block fluid p-5"
+                            className="w-100 d-inline-block fluid p-5 rounded-circle"
                         />{' '}
                     </Col>
                 </Row>
@@ -35,7 +34,7 @@ const Home = () => {
             </Container>
 
 
-            <Container className="d-flex px-5 pb-5">
+            <Container className="d-flex px-2 pb-5">
 
                 <Row className="d-flex flex-lg-row align-items-center">
                     <Col lg={5}>
@@ -52,7 +51,7 @@ const Home = () => {
                 </Row>
             </Container>
 
-            <Container className="d-flex px-5 pb-5">
+            <Container className="d-flex px-2 pb-5">
 
                 <Row className="d-flex flex-column-reverse flex-lg-row align-items-center">
                     <Col lg={7} className="py-5">

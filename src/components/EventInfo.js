@@ -6,7 +6,7 @@ export default function EventInfo(info) {
     return (
         <>
 
-            <Container className="p-5 border-bottom">
+            <Container className="py-5 px-2 border-bottom">
                 <Row className="d-flex flex-column-reverse flex-lg-row">
                     <Col lg={6}>
                         <h1>{info.name.toUpperCase()}</h1>

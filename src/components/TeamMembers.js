@@ -26,7 +26,7 @@ function Team(team) {
 export default function TeamMembers() {
     return (
         <>
-            <Container className="pt-5 px-5">
+            <Container className="pt-5 px-2">
                 <Header name="Team Members" />
                 <Row className="pt-5 align-items-top justify-content-evenly">
                     <Col>
@@ -35,7 +35,7 @@ export default function TeamMembers() {
                 </Row>
             </Container>
 
-            <Container className="p-5">
+            <Container className="px-2">
                 <h2 className="pb-5">Council Members</h2>
 
                 <Row className="align-items-top justify-content-evenly">
