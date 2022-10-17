@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
@@ -15,23 +15,21 @@ import EducationTraining from "./pages/events/EducationTraining";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="events" element={<Events />}>
-            <Route path="talkswebinars" element={<TalksWebinar />} />
-            <Route path="mentalhealthawarenesscampaigns" element={<MentalHealthAwarenessCampaigns />} />
-            <Route path="communityoutreach" element={<CommunityOutreach />} />
-            <Route path="educationtraining" element={<EducationTraining />} />
-          </Route>
-          <Route path="media" element={<Media />} />
-          <Route path="getinvolved" element={<GetInvolved />} />
-          <Route path="donate" element={<Donate />} />
-          <Route path="*" element={<NoPage />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="events" element={<Events />}>
+          <Route path="talkswebinars" element={<TalksWebinar />} />
+          <Route path="mentalhealthawarenesscampaigns" element={<MentalHealthAwarenessCampaigns />} />
+          <Route path="communityoutreach" element={<CommunityOutreach />} />
+          <Route path="educationtraining" element={<EducationTraining />} />
         </Route>
-      </Routes>
-    </BrowserRouter>
+        <Route path="media" element={<Media />} />
+        <Route path="getinvolved" element={<GetInvolved />} />
+        <Route path="donate" element={<Donate />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
   );
 }
 
