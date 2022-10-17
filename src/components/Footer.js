@@ -44,7 +44,7 @@ export default function Footer() {
                             </li>
                             <li className="mb-1">
                                 <NavLink
-                                    to="/events/mhawarenesscampaigns"
+                                    to="/events/mentalhealthawarenesscampaigns"
                                     style={{ textDecoration: "none" }}
                                     className="link-secondary">
                                     Mental Health Awareness Campaigns
