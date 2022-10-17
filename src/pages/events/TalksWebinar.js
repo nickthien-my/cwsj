@@ -4,7 +4,7 @@ import talkswebinarslist from '../../components/talkswebinarslist'
 export default function TalksWebinar() {
     return (
         <>
-            {talkswebinarslist.reverse().map(EventInfo)}
+            {talkswebinarslist.map(EventInfo)}
         </>
 
     )
