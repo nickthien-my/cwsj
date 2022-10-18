@@ -13,7 +13,7 @@ export default function GetInvolved() {
                     className="w-100 fluid"
                 />
             </Container>
-            <Container className="p-5">
+            <Container className="px-2 py-5">
                 <div>
                     <Header name="Get Involved" />
                     <p className="col-md-8 fs-4 pb-5">Interested in getting involved in the community? Join us as a volunteer.</p>

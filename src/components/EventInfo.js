@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap"
-import Captions from "./Captions"
 
 export default function EventInfo(info) {
 
@@ -13,7 +12,7 @@ export default function EventInfo(info) {
                         <h4>{info.subtitle}</h4>
                         <h4 className="text-muted">{info.datetime}</h4>
                         <h5 className="pb-3">{info.location}</h5>
-                        {info.blurb.map(Captions)}
+                        <div>{info.body}</div>
                     </Col>
                     <Col lg={6}>
                         <img
