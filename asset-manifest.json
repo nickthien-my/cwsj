@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c59cc657.css",
-    "main.js": "/static/js/main.6ddad91b.js",
+    "main.js": "/static/js/main.2247964d.js",
     "static/media/20190511_004.jpg": "/static/media/20190511_004.e374576b5ee57cabfdc5.jpg",
     "static/media/20190714_007.jpg": "/static/media/20190714_007.9bd8ee5f62150bb0cc44.jpg",
     "static/media/20190511_002.jpg": "/static/media/20190511_002.93ead6ba112a6a71f672.jpg",
@@ -43,6 +43,7 @@
     "static/media/jom_sembang_005.jpg": "/static/media/jom_sembang_005.eb52c5a8ac0825cb3216.jpg",
     "static/media/jom_sembang_004.jpg": "/static/media/jom_sembang_004.5835be7ea4a2a77dab0c.jpg",
     "static/media/pandemicfatigue_1.jpg": "/static/media/pandemicfatigue_1.92685747646f3d1e35c4.jpg",
+    "static/media/jom_sembang_016.jpg": "/static/media/jom_sembang_016.8a043e731523e7cc4973.jpg",
     "static/media/jom_sembang_009.jpg": "/static/media/jom_sembang_009.4d66303ffd3a21c2fc58.jpg",
     "static/media/walkahunt2019.jpg": "/static/media/walkahunt2019.f84cedbb2cd54b06f877.jpg",
     "static/media/jom_sembang_013.jpg": "/static/media/jom_sembang_013.aa4361ee303dd51c4933.jpg",
@@ -84,10 +85,10 @@
     "static/media/understanding.svg": "/static/media/understanding.e77ad98212b38e0bc12a005d0ee4f825.svg",
     "index.html": "/index.html",
     "main.c59cc657.css.map": "/static/css/main.c59cc657.css.map",
-    "main.6ddad91b.js.map": "/static/js/main.6ddad91b.js.map"
+    "main.2247964d.js.map": "/static/js/main.2247964d.js.map"
   },
   "entrypoints": [
     "static/css/main.c59cc657.css",
-    "static/js/main.6ddad91b.js"
+    "static/js/main.2247964d.js"
   ]
 }
