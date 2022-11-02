@@ -1,5 +1,5 @@
 {
-  "name": "Care Warriors Association",
+  "name": "care-warriors-association",
   "private": false,
   "description": " ",
   "version": "1.0.1",
@@ -43,15 +43,15 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r-ichard/gatsby-starter-bootstrap-5.git"
+    "url": "https://github.com/nickthien-my/cwsj"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/nickthien-my"
   },
-  "homepage": "https://github.com/r-ichard/gatsby-starter-bootstrap-5#readme",
+  "homepage": "https://github.com/nickthien-my/cwsj",
   "main": "gatsby-browser.js"
 }
