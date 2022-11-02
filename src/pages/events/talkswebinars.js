@@ -1,19 +1,19 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
 
-export default function communityoutreach({ data }) {
+export default function talkswebinars({ data }) {
   console.log(data)
   return (
     <Layout>
-      <Seo title="Community Outreach" />
+      <Seo title="Talks/Webinars" />
 
       <div className="container">
-        <h1 className="pt-5">COMMUNITY OUTREACH</h1>
+        <h1 className="pt-5">TALKS/WEBINARS</h1>
         <hr />
-        {data.allDataCommunityOutreachJson.edges.map((info, i) => (
+        {data.allDataTalksWebinarsJson.edges.map((info, i) => (
           <React.Fragment key={info.node.id}>
             <div className="pt-3 pb-5">
               <div className="row d-flex flex-column-reverse flex-lg-row align-items-start">
@@ -45,7 +45,7 @@ export default function communityoutreach({ data }) {
                 </div>
               </div>
             </div>
-            {i !== data.allDataCommunityOutreachJson.edges.length - 1 && <> <hr /> </>}
+            {i !== data.allDataTalksWebinarsJson.edges.length - 1 && <> <hr /> </>}
           </React.Fragment>
         ))}
       </div>
@@ -54,15 +54,14 @@ export default function communityoutreach({ data }) {
 }
 
 export const query = graphql`
-query dataCommunityOutreachQuery {
-    allDataCommunityOutreachJson {
+query dataTalksWebinarsQuery {
+    allDataTalksWebinarsJson {
       edges {
         node {
           id
           title
           subtitle
           datetime
-          location
           img {
             childImageSharp {
               fluid {

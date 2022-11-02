@@ -1,25 +1,31 @@
-import { Container } from "react-bootstrap";
-import Header from "../components/Header";
-import background from "./img/general/jumbo.jpg";
+import * as React from 'react'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
+import { StaticImage } from 'gatsby-plugin-image'
 
-
-export default function GetInvolved() {
+export default function getinvolved() {
     return (
-        <>
-            <Container>
-                <img
-                    src={background}
-                    alt=""
-                    className="w-100 fluid"
-                />
-            </Container>
-            <Container className="px-2 py-5">
-                <div>
-                    <Header name="Get Involved" />
-                    <p className="col-md-8 fs-4 pb-5">Interested in getting involved in the community? Join us as a volunteer.</p>
-                    <a href="mailto:persatuanwirakasih@gmail.com"><button className="btn btn-primary btn-lg" type="button">Join Us!</button></a>
+        <Layout>
+            <Seo title="Get Involved" />
+            <div className="container">
+                <div className="row">
+                    <StaticImage
+                        src="../images/general/jumbo.jpg"
+                        quality={95}
+                        formats={["AUTO", "WEBP"]}
+                        alt="Get Involved Header"
+                        className="img-fluid" />
                 </div>
-            </Container >
-        </>
+                <div className="pt-3 py-5">
+                    <div>
+                        <h1>GET INVOLVED</h1>
+                        <hr />
+                        <p className="fs-4 pb-3">Interested in getting involved in the community? Join us as a volunteer.</p>
+                        <a href="mailto:persatuanwirakasih@gmail.com"><button className="btn btn-primary btn-lg" type="button">Join Us!</button></a>
+                    </div>
+                </div>
+            </div>
+        </Layout>
+
     )
 }

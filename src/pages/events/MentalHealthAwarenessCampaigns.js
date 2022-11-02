@@ -1,77 +1,63 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import PhotoHeader from '../../components/PhotoHeader'
-import Photo from '../../components/Photo'
-import img_1_1 from './img/events/mentalhealthawarenesscampaigns/20191026_001.jpg'
-import img_1_2 from './img/events/mentalhealthawarenesscampaigns/20191026_002.jpg'
-import img_1_3 from './img/events/mentalhealthawarenesscampaigns/20191026_003.jpg'
-import img_1_4 from './img/events/mentalhealthawarenesscampaigns/20191026_004.jpg'
-import img_2_1 from './img/events/mentalhealthawarenesscampaigns/20190714_001.jpg'
-import img_2_2 from './img/events/mentalhealthawarenesscampaigns/20190714_002.jpg'
-import img_2_3 from './img/events/mentalhealthawarenesscampaigns/20190714_003.jpg'
-import img_2_4 from './img/events/mentalhealthawarenesscampaigns/20190714_004.jpg'
-import img_2_5 from './img/events/mentalhealthawarenesscampaigns/20190714_005.jpg'
-import img_2_6 from './img/events/mentalhealthawarenesscampaigns/20190714_006.jpg'
-import img_2_7 from './img/events/mentalhealthawarenesscampaigns/20190714_007.jpg'
-import img_3_1 from './img/events/mentalhealthawarenesscampaigns/20190511_001.jpg'
-import img_3_2 from './img/events/mentalhealthawarenesscampaigns/20190511_002.jpg'
-import img_3_3 from './img/events/mentalhealthawarenesscampaigns/20190511_003.jpg'
-import img_3_4 from './img/events/mentalhealthawarenesscampaigns/20190511_004.jpg'
+import * as React from 'react'
+import Layout from '../../components/layout'
+import Seo from '../../components/seo'
+import { graphql } from 'gatsby'
 
+export default function mentalhealthawarenesscampaigns({ data }) {
+  return (
+    <Layout>
+      <Seo title="Mental Health Awareness Campaigns" />
 
-export default function MentalHealthAwarenessCampaigns() {
-    return (
-        <>
-            <Container className="py-5">
-                <PhotoHeader name="Coming Out For The First Time Da Men Mall - Hari Ibu MPSJ 11 May 2019" />
-                <Row>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_3_3} />
-                    </Col>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_3_2} />
-                        <Photo imgSrc={img_3_4} />
-                    </Col>
-                    <Col>
-                        <Photo imgSrc={img_3_1} />
-                    </Col>
-                </Row>
-            </Container>
+      <div className="container">
+        <h1 className="pt-5">MENTAL HEALTH AWARENESS CAMPAIGNS</h1>
+        <hr />
+        {data.allDataCampaignsJson.edges.map((entry, i) => (
+          <React.Fragment key={entry.node.id}>
+            <div className="pt-3 pb-5">
+              <h3>{entry.node.name}</h3>
+              <div className="row align-items-start">
+                {entry.node.gallery.map(image => (
+                  <React.Fragment key={image.name}>
+                    <img
+                      src={image.img.childImageSharp.fluid.src}
+                      quality={95}
+                      formats={["AUTO", "WEBP"]}
+                      alt={image.name}
+                      className="col-lg-4 py-3"
+                    />
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+            {i !== data.allDataCampaignsJson.edges.length - 1 && <> <hr /> </>}
 
-            <Container className="py-5">
-                <PhotoHeader name="Walk-a-hunt 14 July 2019" />
-                <Row>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_2_1} />
-                        <Photo imgSrc={img_2_4} />
-                    </Col>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_2_2} />
-                        <Photo imgSrc={img_2_5} />
-                    </Col>
-                    <Col>
-                        <Photo imgSrc={img_2_3} />
-                        <Photo imgSrc={img_2_6} />
-                        <Photo imgSrc={img_2_7} />
-                    </Col>
-                </Row>
-            </Container>
-
-            <Container className="py-5">
-                <PhotoHeader name="Mental Health Day Hunt 26 Oct 2019" />
-                <Row>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_1_1} />
-                        <Photo imgSrc={img_1_4} />
-                    </Col>
-                    <Col lg={4}>
-                        <Photo imgSrc={img_1_2} />
-                    </Col>
-                    <Col>
-                        <Photo imgSrc={img_1_3} />
-                    </Col>
-                </Row>
-            </Container>
-        </>
-    )
+          </React.Fragment>
+        ))
+        }
+      </div >
+    </Layout >
+  )
 }
+
+export const query = graphql`
+query dataCampaignsQuery {
+allDataCampaignsJson {
+    edges {
+      node {
+        id
+        name
+        gallery {
+          img {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+          name
+        }
+      }
+    }
+  }
+}
+`

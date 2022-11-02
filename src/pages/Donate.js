@@ -1,33 +1,34 @@
-import { Container } from "react-bootstrap";
-import Header from "../components/Header";
-import background from "./img/general/jumbo.jpg";
+import * as React from 'react'
+import Layout from '../components/layout'
+import Seo from "../components/seo"
+import { StaticImage } from 'gatsby-plugin-image'
 
-
-export default function Donate() {
+export default function donate() {
     return (
-        <>
-            <Container>
-                <img
-                    src={background}
-                    alt=""
-                    className="w-100 fluid"
-                />
-            </Container>
-            <Container className="px-2 py-5">
-                <div>
-                    <Header name="Donate" />
-                    <p className="fs-4">Help us to do more for the community. Consider donating to our cause!</p>
+        <Layout>
+            <Seo title="Donate" />
 
+            <div className="container">
+                <div className="row">
+                    <StaticImage
+                        src="../images/general/jumbo.jpg"
+                        quality={95}
+                        formats={["AUTO", "WEBP"]}
+                        alt="Donate Header"
+                        className="img-fluid" />
                 </div>
-                <div className="pt-4">
-                    <h4>Persatuan Wira Kasih</h4>
-                    <p>562302625709 (Maybank)</p>
+                <div className="pt-3 pb-5">
+                    <div>
+                        <h1>DONATE</h1>
+                        <hr />
+                        <p className="fs-4 pb-3">Help us to do more for the community. Consider donating to our cause!</p>
+
+                        <h3>Persatuan Wira Kasih</h3>
+                        <p>562302625709 (Maybank)</p>
+                    </div>
                 </div>
+            </div>
+        </Layout>
 
-            </Container>
-
-
-
-        </>
     )
 }

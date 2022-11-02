@@ -1,77 +1,143 @@
-import React from 'react'
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Header from './Header';
-import profileybmichelleng from "./img/profile/profile_ybmichelleng.jpg";
-import profiledramersiddiq from "./img/profile/profile_dramersiddiq.jpg";
-import profiledrlimpohkhuen from "./img/profile/profile_drlimpohkhuen.jpg";
-import profilepriscaleong from "./img/profile/profile_priscaleong.jpg";
-import profileyingeong from "./img/profile/profile_yingeong.jpg";
-import profileizahrajajaafar from "./img/profile/profile_izahrajajaafar.jpg";
-import profilechristinagoh from "./img/profile/profile_christinagoh.jpg";
-import profilephehkaishuen from "./img/profile/profile_phehkaishuen.jpg";
-
+import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 function Team(team) {
     return (
-        <div className="pb-5">
-            <img className="d-block rounded-circle mx-auto mb-3" width="140" height="140" src={team.imgLocation} alt={team.name} />
+        <>
             <h4 className="text-center">{team.name}</h4>
             <p className="text-center text-muted">{team.role}</p>
-        </div>
+        </>
     );
 }
 
 export default function TeamMembers() {
     return (
-        <>
-            <Container className="pt-5 px-2">
-                <Header name="Team Members" />
-                <Row className="pt-5 align-items-top justify-content-evenly">
-                    <Col>
-                        <Team name="Y.B. Puan Michelle Ng Mei Sze" imgLocation={profileybmichelleng} role="Honorary Adviser" />
-                    </Col>
-                </Row>
-            </Container>
+        <div className="container pb-5">
 
-            <Container className="px-2">
+            <h1 className="pb-5 fw-bold">TEAM MEMBERS</h1>
+            <div className="row align-items-top justify-content-center">
+                <div className="col-lg-4 pb-3">
+                    <div className="row pb-3">
+                        <StaticImage
+                            className="img-fluid rounded-circle mx-auto"
+                            quality={95}
+                            formats={["AUTO", "WEBP"]}
+                            layout="fixed"
+                            width={200}
+                            height={200}
+                            src="../images/profile/profile_michelleng.jpg" alt="Y.B. Puan Michelle Ng Mei Sze" />
+                    </div>
+                    <Team
+                        name="Y.B. Puan Michelle Ng Mei Sze"
+                        role="Honorary Adviser"
+                    />
+                </div>
+            </div>
+
+
+            <div className="px-2">
                 <h2 className="pb-5">Council Members</h2>
 
-                <Row className="align-items-top justify-content-evenly">
-                    <Col lg={4}>
-                        <Team name="Prof. Madya Dr. Amer Siddiq Amer Mordin" imgLocation={profiledramersiddiq} role="Chairman & Consultant Psychiatrist" />
-                    </Col>
-                    <Col lg={4}>
-                        <Team name="Dr. Lim Poh Khuen" imgLocation={profiledrlimpohkhuen} role="Vice President" />
-                    </Col>
-                </Row>
+                <div className="row align-items-top justify-content-evenly">
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_dramersiddiq.jpg" alt="Prof. Madya Dr. Amer Siddiq Amer Mordin" />
+                        </div>
+                        <Team name="Prof. Madya Dr. Amer Siddiq Amer Mordin" role="Chairman & Consultant Psychiatrist" />
+                    </div>
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_pohkhuen.jpg" alt="Dr. Lim Poh Khuen" />
+                        </div>
+                        <Team name="Dr. Lim Poh Khuen" role="Vice President" />
+                    </div>
+                </div>
 
-                <Row className="align-items-top justify-content-evenly">
-                    <Col lg={4}>
-                        <Team name="Ms. Prisca Leong Mae Jern" imgLocation={profilepriscaleong} role="Secretary" />
-                    </Col>
-                    <Col lg={4}>
-                        <Team name="Mr. Har Yin Geong" imgLocation={profileyingeong} role="Treasurer" />
-                    </Col>
-                </Row>
+                <div className="row align-items-top justify-content-evenly">
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_priscaleong.jpg" alt="Ms. Prisca Leong Mae Jern" />
+                        </div>
+                        <Team name="Ms. Prisca Leong Mae Jern" role="Secretary" />
+                    </div>
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_yingeong.jpg" alt="Mr. Har Yin Geong" />
+                        </div>
+                        <Team name="Mr. Har Yin Geong" role="Treasurer" />
+                    </div>
+                </div>
 
-                <Row className="align-items-top justify-content-evenly">
-                    <Col lg={4}>
-                        <Team name="YM Raja Nor Izah Raja Jaafar" imgLocation={profileizahrajajaafar} role="Council Member" />
-
-                    </Col>
-                    <Col lg={4}>
-                        <Team name="Ms. Christina Goh Chin Cheng" imgLocation={profilechristinagoh} role="Council Member" />
-                    </Col>
-                    <Col lg={4}>
-                        <Team name="Mr. Pheh Kai Shuen" imgLocation={profilephehkaishuen} role="Council Member" />
-                    </Col>
-                </Row>
-
-            </Container>
-
-        </>
-
+                <div className="row align-items-top justify-content-evenly">
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_izahrajajaafar.jpg" alt="YM Raja Nor Izah Raja Jaafar" />
+                        </div>
+                        <Team name="YM Raja Nor Izah Raja Jaafar" role="Council Member" />
+                    </div>
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_christinagoh.jpg" alt="Ms. Christina Goh Chin Cheng" />
+                        </div>
+                        <Team name="Ms. Christina Goh Chin Cheng" role="Council Member" />
+                    </div>
+                    <div className="col-lg-4 pb-3">
+                        <div className="row pb-3">
+                            <StaticImage
+                                className="img-fluid rounded-circle mx-auto"
+                                quality={95}
+                                formats={["AUTO", "WEBP"]}
+                                layout="fixed"
+                                width={200}
+                                height={200}
+                                src="../images/profile/profile_phehkaishuen.jpg" alt="Mr. Pheh Kai Shuen" />
+                        </div>
+                        <Team name="Mr. Pheh Kai Shuen" role="Council Member" />
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
