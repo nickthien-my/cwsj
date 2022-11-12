@@ -1,7 +1,7 @@
 {
   "name": "care-warriors-association",
   "private": false,
-  "description": " ",
+  "description": "Official website of the Care Warriors Association, Subang Jaya.",
   "version": "1.0.1",
   "author": "Nicholas Thien <nick.thien@gmail.com>",
   "dependencies": {

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Care Warriors Association`,
-    description: `Care Warriors Association`,
-    author: `@nickthien`,
+    description: `Official website of the Care Warriors Association, Subang Jaya.`,
+    author: `@nickthien-my`,
     siteUrl: `https://www.carewarriors.org.my`,
   },
   plugins: [
