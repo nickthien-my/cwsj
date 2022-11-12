@@ -1,12 +1,12 @@
-import * as React from 'react'
-import Layout from '../../components/layout'
-import Seo from '../../components/seo'
-import { graphql } from 'gatsby'
+import * as React from "react"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import { graphql } from "gatsby"
 
 export default function educationtraining({ data }) {
   return (
     <Layout>
-      <Seo title="Education/Training" />
+      <Seo title="Education/Training" description="Education and Training" />
 
       <div className="container">
         <h1 className="pt-5">EDUCATION/TRAINING</h1>
@@ -29,35 +29,38 @@ export default function educationtraining({ data }) {
                 ))}
               </div>
             </div>
-            {i !== data.allDataEducationTrainingJson.edges.length - 1 && <> <hr /> </>}
+            {i !== data.allDataEducationTrainingJson.edges.length - 1 && (
+              <>
+                {" "}
+                <hr />{" "}
+              </>
+            )}
           </React.Fragment>
-        ))
-        }
-      </div >
+        ))}
+      </div>
     </Layout>
-
   )
 }
 
 export const query = graphql`
-query dataEducationTrainingQuery {
-allDataEducationTrainingJson {
-    edges {
-      node {
-        id
-        name
-        gallery {
-          img {
-            childImageSharp {
-              fluid {
-                src
+  query dataEducationTrainingQuery {
+    allDataEducationTrainingJson {
+      edges {
+        node {
+          id
+          name
+          gallery {
+            img {
+              childImageSharp {
+                fluid {
+                  src
+                }
               }
             }
+            name
           }
-          name
         }
       }
     }
   }
-}
 `

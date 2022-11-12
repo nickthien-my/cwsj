@@ -1,12 +1,15 @@
-import * as React from 'react'
-import Layout from '../../components/layout'
-import Seo from '../../components/seo'
-import { graphql } from 'gatsby'
+import * as React from "react"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import { graphql } from "gatsby"
 
 export default function mentalhealthawarenesscampaigns({ data }) {
   return (
     <Layout>
-      <Seo title="Mental Health Awareness Campaigns" />
+      <Seo
+        title="Mental Health Awareness Campaigns"
+        description="Mental Health Awareness Campaigns"
+      />
 
       <div className="container">
         <h1 className="pt-5">MENTAL HEALTH AWARENESS CAMPAIGNS</h1>
@@ -29,35 +32,38 @@ export default function mentalhealthawarenesscampaigns({ data }) {
                 ))}
               </div>
             </div>
-            {i !== data.allDataCampaignsJson.edges.length - 1 && <> <hr /> </>}
-
+            {i !== data.allDataCampaignsJson.edges.length - 1 && (
+              <>
+                {" "}
+                <hr />{" "}
+              </>
+            )}
           </React.Fragment>
-        ))
-        }
-      </div >
-    </Layout >
+        ))}
+      </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
-query dataCampaignsQuery {
-allDataCampaignsJson {
-    edges {
-      node {
-        id
-        name
-        gallery {
-          img {
-            childImageSharp {
-              fluid {
-                src
+  query dataCampaignsQuery {
+    allDataCampaignsJson {
+      edges {
+        node {
+          id
+          name
+          gallery {
+            img {
+              childImageSharp {
+                fluid {
+                  src
+                }
               }
             }
+            name
           }
-          name
         }
       }
     }
   }
-}
 `

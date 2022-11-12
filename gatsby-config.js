@@ -3,8 +3,10 @@ module.exports = {
     title: `Care Warriors Association`,
     description: `Care Warriors Association`,
     author: `@nickthien`,
+    siteUrl: `https://www.carewarriors.org.my`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

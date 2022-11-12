@@ -1,14 +1,13 @@
-import { graphql } from 'gatsby'
-import React from 'react'
-import Layout from '../../components/layout'
-import Seo from '../../components/seo'
-
+import { graphql } from "gatsby"
+import React from "react"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
 export default function talkswebinars({ data }) {
   console.log(data)
   return (
     <Layout>
-      <Seo title="Talks/Webinars" />
+      <Seo title="Talks/Webinars" description="Talks and Webinars" />
 
       <div className="container">
         <h1 className="pt-5">TALKS/WEBINARS</h1>
@@ -45,7 +44,12 @@ export default function talkswebinars({ data }) {
                 </div>
               </div>
             </div>
-            {i !== data.allDataTalksWebinarsJson.edges.length - 1 && <> <hr /> </>}
+            {i !== data.allDataTalksWebinarsJson.edges.length - 1 && (
+              <>
+                {" "}
+                <hr />{" "}
+              </>
+            )}
           </React.Fragment>
         ))}
       </div>
@@ -54,7 +58,7 @@ export default function talkswebinars({ data }) {
 }
 
 export const query = graphql`
-query dataTalksWebinarsQuery {
+  query dataTalksWebinarsQuery {
     allDataTalksWebinarsJson {
       edges {
         node {

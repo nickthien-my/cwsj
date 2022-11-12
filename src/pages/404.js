@@ -5,12 +5,14 @@ import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <Seo title="404: Not found" />
+    <Seo
+      title="404: Not found"
+      description="Lost? You might have the wrong link"
+    />
     <div className="container text-center my-5">
       <h1>404: Not Found</h1>
       <p>There's nothing here. Maybe the link is wrong.</p>
     </div>
-
   </Layout>
 )
 

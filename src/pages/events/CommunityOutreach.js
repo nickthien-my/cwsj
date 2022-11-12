@@ -1,14 +1,16 @@
-import { graphql } from 'gatsby'
-import React from 'react'
-import Layout from '../../components/layout'
-import Seo from '../../components/seo'
-
+import { graphql } from "gatsby"
+import React from "react"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
 export default function communityoutreach({ data }) {
   console.log(data)
   return (
     <Layout>
-      <Seo title="Community Outreach" />
+      <Seo
+        title="Community Outreach"
+        description="Check out the community outreach projects that we have been a part of."
+      />
 
       <div className="container">
         <h1 className="pt-5">COMMUNITY OUTREACH</h1>
@@ -45,7 +47,12 @@ export default function communityoutreach({ data }) {
                 </div>
               </div>
             </div>
-            {i !== data.allDataCommunityOutreachJson.edges.length - 1 && <> <hr /> </>}
+            {i !== data.allDataCommunityOutreachJson.edges.length - 1 && (
+              <>
+                {" "}
+                <hr />{" "}
+              </>
+            )}
           </React.Fragment>
         ))}
       </div>
@@ -54,7 +61,7 @@ export default function communityoutreach({ data }) {
 }
 
 export const query = graphql`
-query dataCommunityOutreachQuery {
+  query dataCommunityOutreachQuery {
     allDataCommunityOutreachJson {
       edges {
         node {
